@@ -1,6 +1,5 @@
 import sys
 
-import sys
 
 def main() -> None:
     print("=== Inventory System Analysis ===")
@@ -11,18 +10,15 @@ def main() -> None:
     for arg in args:
         colon_idx: int = -1
         
-        # Encontra o índice do delimitador manualmente (substituindo o split)
         for i in range(len(arg)):
             if arg[i] == ":":
                 colon_idx = i
                 break
 
-        # Se não houver ':', o formato é inválido
         if colon_idx == -1:
             print(f"Error - invalid parameter '{arg}'")
             continue
 
-        # Utiliza slicing da linguagem (não é método) para separar as partes
         item: str = arg[:colon_idx]
         qty_str: str = arg[colon_idx + 1:]
 
@@ -72,6 +68,7 @@ def main() -> None:
 
     inventory.update({"magic_item": 1})
     print(f"Updated inventory: {inventory}")
+
 
 if __name__ == "__main__":
     main()
