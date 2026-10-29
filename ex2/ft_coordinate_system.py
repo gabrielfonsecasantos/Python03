@@ -64,7 +64,7 @@ def main() -> None:
     dy: float = pos2[1] - pos1[1]
     dz: float = pos2[2] - pos1[2]
     distance_2_pts: float = math.sqrt(dx**2 + dy**2 + dz**2)
-    print(f"Distance between the 2 sets of coordinates:"
+    print(f"Distance between the 2 sets of coordinates: "
           f"{round(distance_2_pts, 4)}")
 
 
