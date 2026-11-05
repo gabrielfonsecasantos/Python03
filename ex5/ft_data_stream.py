@@ -21,8 +21,6 @@ def consume_event(
         for item in event_list:
             if item == element:
                 event_list.remove(item)
-                # O ideal é usar break aqui após remover para evitar
-                # comportamentos inesperados ao iterar numa lista modificada
                 break
         yield element
 
