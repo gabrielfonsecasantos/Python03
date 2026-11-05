@@ -3,7 +3,8 @@ import math
 
 def get_player_pos() -> tuple[float, float, float]:
     while True:
-        user_input: str = input("Enter new coordinates as floats in format 'x,y,z': ")
+        print("Enter new coordinates as floats in format ", end="")
+        user_input: str = input("'x,y,z': ")
 
         parts: list[str] = []
         current: str = ""

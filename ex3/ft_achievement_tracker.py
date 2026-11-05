@@ -17,7 +17,8 @@ def gen_player_achievements() -> set[str]:
         current_index = 0
         for item in achievements_list:
             if random_index == current_index:
-                new_set = new_set | {item}
+                new_achievement: set[str] = {item}
+                new_set = new_set.union(new_achievement)
                 break
             current_index += 1
     return new_set
@@ -53,4 +54,3 @@ if __name__ == "__main__":
     print(f"Bob is missing: {achievements_list.difference(bob)}")
     print(f"Charlie is missing: {achievements_list.difference(charlie)}")
     print(f"Dylan is missing: {achievements_list.difference(dylan)}")
-    
